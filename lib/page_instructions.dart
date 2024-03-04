@@ -11,51 +11,35 @@ class PageInstructions extends StatelessWidget {
           children: <Widget>[
             Container(
               margin: EdgeInsets.only(bottom: 20.0),
-              child: Image.asset(
-                'chemin_vers_ton_image/image.png',
-                width: 200, 
-              ),
+              child: Image.asset('assets/purchasing-habits-abstract-concept_335657-2995.jpg.avif'),
             ),
             Text(
-              'Instructions d\'utilisation de l\'application',
+              'Pagde inscriptio ',
               style: TextStyle(fontSize: 24.0),
-            
             ),
-
             SizedBox(height: 20.0),
-            
-           Align(
-            alignment: Alignment.bottomRight,
-            child:  ElevatedButton(
-    onPressed: () {
-     Navigator.pushNamed(context, '/instructions');
-    },
-    style: ElevatedButton.styleFrom(
-      primary: Colors.black,
-      shape: RoundedRectangleBorder( 
-      borderRadius: BorderRadius.circular(10.0),
-    ),
-    ) ,
-    child: Text('suivant'),
-        ),
-           ),
-       Align(
-        alignment: Alignment.bottomLeft,
-        child:  ElevatedButton(
-            onPressed: () {
-                   Navigator.pushNamed(context, '/accueil');
-                 },
-                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white
-                 ),
-      child: Text('Skip ',
-      ),
-            ),
-       )
-
-                ],
+            Align(
+              alignment: Alignment.bottomRight,
+              child: ElevatedButton(
+                    onPressed: () {
+                        Navigator.pushNamed(context, '/page_mise_en_garde');
+                              },
+                    child: Text('suivant'),
               ),
             ),
+Align(
+  alignment: Alignment.bottomLeft,
+  child: ElevatedButton(
+  onPressed: () {
+    Navigator.pushNamed(context, '/accueil');
+  },
+  child: Text('précedent'),
+),
+)
+
+          ],
+        ),
+      ),
           );
         }
       }

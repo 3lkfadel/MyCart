@@ -9,6 +9,11 @@ class PageAccueil extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(bottom: 20.0),
+              child: Image.asset
+              ('assets/purchasing-habits-abstract-concept_335657-2995.jpg.avif'),
+            ),
             Text(
               'Bienvenue sur notre application !',
               style: TextStyle(fontSize: 24.0),
