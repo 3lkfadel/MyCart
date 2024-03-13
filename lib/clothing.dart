@@ -6,6 +6,7 @@ class ClothingApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text(
@@ -48,7 +49,7 @@ class ClothingScreen extends StatelessWidget {
                   );
                 },
                 child: ClothingItem(
-                  imageUrl:  'assets/image${index + 1}.jpg', // Utilisez le chemin relatif de vos images
+                  imageUrl:  'assets/${index + 1}.jpg', // Utilisez le chemin relatif de vos images
                   price: Random().nextInt(25001) + 15000, // Prix entre 15000 et 40000 FCFA
                   itemName: "Nom de l'article",
                 ),

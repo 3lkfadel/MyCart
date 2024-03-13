@@ -1,3 +1,4 @@
+import 'package:e_com_pro/clothing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -43,7 +44,7 @@ class Menu extends StatelessWidget {
                 trailing: IconButton(
                   icon: Icon(Icons.arrow_forward),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/ClothingApp');
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ClothingApp()));
                   },
                 ),
                 title: Text("Robe"),
