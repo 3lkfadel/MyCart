@@ -13,16 +13,16 @@ class page_mise_en_garde extends StatelessWidget {
           children: <Widget>[
             Container(
               margin: EdgeInsets.only(bottom: 20.0),
-              child: Image.asset('assets/purchasing-habits-abstract-concept_335657-2995.jpg.avif'),
+              child: Image.asset('assets/seasonal-sale-discounts-presents-purchase-visiting-boutiques-luxury-shopping-price-reduction-promotional-coupons-special-holiday-offers-vector-isolated-concept-metaphor-illustration_335657-2766.avif'),
 
             ),
-            SizedBox(height: 20.0),
+            SizedBox(height: 80.0),
 
             Align(
-              alignment: Alignment.bottomRight,
+              alignment: Alignment.bottomCenter,
               child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/Menu');
+                Navigator.pushNamed(context, '/menu_items');
               },
                child: Text('commencé'),
                ),

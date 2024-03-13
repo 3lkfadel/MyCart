@@ -10,7 +10,15 @@ class Menu extends StatelessWidget {
       appBar: AppBar(
        
         title: Text("Categorie"),
-        actions: [Icon(Icons.shop_sharp)],
+        actions: [GestureDetector(
+          onTap: () {
+             Navigator.pushNamed(context, '/Panier');
+          },
+           child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        child: Icon(Icons.shop_sharp),
+      ),
+        )],
         
         
       ),
@@ -34,7 +42,9 @@ class Menu extends StatelessWidget {
                 leading: Image.asset('assets/1.jpg'),
                 trailing: IconButton(
                   icon: Icon(Icons.arrow_forward),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/ClothingApp');
+                  },
                 ),
                 title: Text("Robe"),
               ),
@@ -49,7 +59,9 @@ class Menu extends StatelessWidget {
                 leading: Image.asset('assets/3.jpg'),
                 trailing: IconButton(
                   icon: Icon(Icons.arrow_forward),
-                  onPressed: () {},
+                  onPressed: () {
+                   Navigator.pushNamed(context, '/infor_cartegorie');
+                  },
                 ),
                 title: Text("Accessoire"),
               ),
