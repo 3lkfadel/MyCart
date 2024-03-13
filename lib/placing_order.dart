@@ -1,3 +1,4 @@
+import 'package:e_com_pro/ArticleListPage.dart';
 import 'package:flutter/material.dart';
 
 class PlacingOrderPage extends StatelessWidget {
@@ -90,7 +91,7 @@ class PlacingOrderPage extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                          Navigator.pushNamed(context, '/Valider');
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Valider()));
                   // Action lorsque le bouton est pressé
                 },
                 child: Text('Confirmer'),
