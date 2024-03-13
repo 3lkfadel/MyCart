@@ -18,7 +18,7 @@ class ArticlePage extends StatelessWidget {
               height: 200.0,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/tee/5.jpeg'), // Image de fond depuis les assets
+                  image: AssetImage('assets/10.jpg'), // Image de fond depuis les assets
                   fit: BoxFit.cover,
                 ),
                 borderRadius: BorderRadius.circular(10.0),
@@ -44,7 +44,7 @@ class ArticlePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Nom de l\'article',
+                    'Robe vermillion en din',
                     style: TextStyle(
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
@@ -60,7 +60,7 @@ class ArticlePage extends StatelessWidget {
                   ),
                   SizedBox(height: 10.0),
                   Text(
-                    'Description de l\'article', // Remplacez par la description réelle
+                    'super robe de tres bonne qqualité chic et classe ', // Remplacez par la description réelle
                     style: TextStyle(
                       fontSize: 16.0,
                     ),
@@ -95,7 +95,7 @@ class ArticlePage extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => BasketPage()),
                         );
                       },
-                      child: Text('Add to basket'),
+                      child: Text('Ajouter au panier'),
                     ),
                   ),
                 ],
@@ -127,10 +127,4 @@ class ArticlePage extends StatelessWidget {
       ),
     );
   }
-}
-
-void main() {
-  runApp(MaterialApp(
-    home: ArticlePage(),
-  ));
 }

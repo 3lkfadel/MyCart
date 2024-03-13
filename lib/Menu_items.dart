@@ -1,3 +1,6 @@
+import 'package:e_com_pro/article_page2.dart';
+import 'package:e_com_pro/article_page3.dart';
+import 'package:e_com_pro/page_article.dart';
 import 'package:flutter/material.dart';
 
 class Menu_items extends StatelessWidget {
@@ -64,7 +67,7 @@ class Menu_items extends StatelessWidget {
               SizedBox(height: 20),
               RectangleContainer(
                 imagePath: 'assets/1.jpg',
-                text: '45% DE OFF /n on All article',
+                text: '45% DE OFF sur  tout  les articles',
                 onPressed: () {
                   // Action à effectuer lorsque le bouton est pressé
                 },
@@ -84,32 +87,47 @@ class Menu_items extends StatelessWidget {
                     RectangleContainerItems(
                       imagePath: 'assets/10.jpg',
                       text: ' Pantalon prix: 500€',
-                      onPressed: () {},
+                      onPressed: () {
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => ArticlePage()));
+                      },
                     ),
                     SizedBox(height: 20),
                     RectangleContainerItems(
                       imagePath: 'assets/9.jpg',
                       text: 'Prix: 500€',
-                      onPressed: () {},
+                      onPressed: () {
+                                                 Navigator.push(context, MaterialPageRoute(builder: (context) => ArticlePage2()));
+
+                      },
+                      
                     ),
                     SizedBox(height: 20),
                     RectangleContainerItems(
                       imagePath: 'assets/8.jpg',
                       text: 'Prix: 500€',
-                      onPressed: () {},
+                      onPressed: () {
+                                                 Navigator.push(context, MaterialPageRoute(builder: (context) => ArticlePage3()));
+
+                      },
                     ),
                     SizedBox(height: 20),
                     RectangleContainerItems(
                       imagePath: 'assets/7.jpg',
                       text: 'Prix: 500€',
-                      onPressed: () {},
+                      onPressed: () {
+                                                 Navigator.push(context, MaterialPageRoute(builder: (context) => ArticlePage()));
+
+                      },
                     ),
                                         SizedBox(height: 20),
 
                     RectangleContainerItems(
                       imagePath: 'assets/7.jpg',
                       text: 'Prix: 500€',
-                      onPressed: () {},
+                      onPressed: () {
+                                                 Navigator.push(context, MaterialPageRoute(builder: (context) => ArticlePage()));
+
+                      },
                     ),
                     
                   ],
@@ -245,14 +263,17 @@ class RectangleContainer extends StatelessWidget {
     );
   }
 }
-
 class RectangleContainerItems extends StatelessWidget {
   final String imagePath;
   final String text;
   final VoidCallback onPressed;
 
-  const RectangleContainerItems({Key? key, required this.imagePath, required this.text, required this.onPressed})
-      : super(key: key);
+  const RectangleContainerItems({
+    Key? key,
+    required this.imagePath,
+    required this.text,
+    required this.onPressed,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -265,9 +286,12 @@ class RectangleContainerItems extends StatelessWidget {
       ),
       child: Row(
         children: [
-          CircleAvatar(
-            radius: 30,
-            backgroundImage: AssetImage(imagePath),
+          GestureDetector(
+            onTap: onPressed, // Utilisez votre fonction onPressed pour le clic
+            child: CircleAvatar(
+              radius: 30,
+              backgroundImage: AssetImage(imagePath),
+            ),
           ),
           SizedBox(width: 20),
           Expanded(

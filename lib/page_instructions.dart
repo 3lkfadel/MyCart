@@ -11,11 +11,13 @@ class PageInstructions extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(bottom: 20.0),
               child: Image.asset(
-                  'assets/shopping-cart-with-bags-gifts-concept-illustration_114360-18775.avif'),
+                'assets/shopping-cart-with-bags-gifts-concept-illustration_114360-18775.avif',
+              ),
             ),
             Text(
-              'Page inscription',
+              'Découvrez une nouvelle expérience de shopping en ligne tout en restant chez vous',
               style: TextStyle(fontSize: 24.0),
+              textAlign: TextAlign.center,
             ),
             SizedBox(height: 100.0),
             Row(
@@ -33,7 +35,6 @@ class PageInstructions extends StatelessWidget {
                   },
                   child: Text('Suivant'),
                 ),
-                
               ],
             ),
           ],

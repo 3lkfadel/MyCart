@@ -48,7 +48,7 @@ class ClothingScreen extends StatelessWidget {
                   );
                 },
                 child: ClothingItem(
-                  imageUrl: 'assets/images${index + 1}.jpeg', // Utilisez le chemin relatif de vos images
+                  imageUrl:  'assets/image${index + 1}.jpg', // Utilisez le chemin relatif de vos images
                   price: Random().nextInt(25001) + 15000, // Prix entre 15000 et 40000 FCFA
                   itemName: "Nom de l'article",
                 ),
@@ -86,8 +86,8 @@ class ClothingItem extends StatelessWidget {
           Expanded(
             child: ClipRRect(
               borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
-              child: Image.asset( // Utilisez Image.asset pour charger l'image à partir des assets
-                imageUrl, // Utilisez l'URL correspondante
+              child: Image.asset(
+                imageUrl,
                 fit: BoxFit.cover,
               ),
             ),

@@ -1,7 +1,35 @@
 import 'package:e_com_pro/placing_order.dart';
 import 'package:flutter/material.dart';
 
-class BasketPage extends StatelessWidget {
+class BasketPage extends StatefulWidget {
+  @override
+  _BasketPageState createState() => _BasketPageState();
+}
+
+class _BasketPageState extends State<BasketPage> {
+  // Variable d'état pour suivre le nombre d'articles sélectionnés pour chaque produit
+  Map<String, int> selectedItems = {
+    'Nom de l\'article 1': 0,
+    'Nom de l\'article 2': 0,
+    'Nom de l\'article 3': 0,
+  };
+
+  // Fonction pour ajouter un article
+  void addItem(String itemName) {
+    setState(() {
+      selectedItems[itemName] = (selectedItems[itemName] ?? 0) + 1;
+    });
+  }
+
+  // Fonction pour supprimer un article
+  void removeItem(String itemName) {
+    if (selectedItems[itemName] != null && selectedItems[itemName]! > 0) {
+      setState(() {
+        selectedItems[itemName] = selectedItems[itemName]! - 1;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +81,7 @@ class BasketPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Items: 3',
+                      'Items: ${selectedItems.values.fold(0, (prev, curr) => prev + curr)}', // Total des articles sélectionnés
                       style: TextStyle(
                         fontSize: 16.0,
                         color: Colors.white,
@@ -87,7 +115,7 @@ class BasketPage extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'FCFA 200',
+                      'FCFA 200', // Prix total
                       style: TextStyle(
                         fontSize: 16.0,
                         fontWeight: FontWeight.bold,
@@ -107,7 +135,7 @@ class BasketPage extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => PlacingOrderPage()),
                       );
                     },
-                    child: Text('Placing an order'),
+                    child: Text('Valider le panier'), // Texte du bouton
                   ),
                 ),
               ],
@@ -161,19 +189,19 @@ class BasketPage extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              // Action lorsque l'utilisateur souhaite ajouter un article
+              addItem(itemName); // Appel de la fonction pour ajouter un article
             },
             icon: Icon(Icons.add),
           ),
           Text(
-            '1', // Nombre d'articles sélectionnés
+            '${selectedItems[itemName] ?? 0}', // Affiche le nombre d'articles sélectionnés
             style: TextStyle(
               fontSize: 16.0,
             ),
           ),
           IconButton(
             onPressed: () {
-              // Action lorsque l'utilisateur souhaite supprimer un article
+              removeItem(itemName); // Appel de la fonction pour supprimer un article
             },
             icon: Icon(Icons.remove),
           ),

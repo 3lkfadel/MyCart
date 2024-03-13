@@ -32,9 +32,9 @@ class MyApp extends StatelessWidget {
         //'/infor_cartegorie':(context) => (),
         '/menu_items':(context) => Menu_items(),
         '/Panier':(context) => BasketPage(),
-        '/ClothingApp':(context) => ClothingApp(),
         '/Valider_panier':(context) => PlacingOrderPage(),
-        '/Details_article':(context) => ArticlePage(),
+        '/Details_article':(context) => ClothingApp(),
+        
 
         
 

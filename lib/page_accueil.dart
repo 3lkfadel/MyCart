@@ -15,21 +15,16 @@ class PageAccueil extends StatelessWidget {
               ),
             ),
             Text(
-              'Bienvenue sur notre application !',
+              'Bienvenue sur mycart, votre destination de choix pour une expérience de shopping en ligne exceptionnelle',
               style: TextStyle(fontSize: 24.0),
+              textAlign: TextAlign.center,
             ),
             SizedBox(height: 100.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/instructions');
-                  },
-                  child: Text('Suivant'),
-                ),
-              ],
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/instructions');
+              },
+              child: Text('Suivant'),
             ),
           ],
         ),
