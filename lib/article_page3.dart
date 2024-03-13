@@ -60,7 +60,7 @@ class ArticlePage3 extends StatelessWidget {
                   ),
                   SizedBox(height: 10.0),
                   Text(
-                    'super robe de tres bonne qqualité chic et classe ', // Remplacez par la description réelle
+                    'super jeams  de tres bonne qqualité chic et classe ', // Remplacez par la description réelle
                     style: TextStyle(
                       fontSize: 16.0,
                     ),
