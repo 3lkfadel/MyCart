@@ -5,7 +5,7 @@ class PlacingOrderPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Placing an Order'),
+        title: Text('Passer une commande'),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20.0),
@@ -13,38 +13,38 @@ class PlacingOrderPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Name:',
+              'Nom :',
               style: TextStyle(fontSize: 18.0),
             ),
             SizedBox(height: 10.0),
             TextFormField(
               decoration: InputDecoration(
-                hintText: 'Enter your name',
+                hintText: 'Entrez votre nom',
                 border: OutlineInputBorder(),
               ),
             ),
             SizedBox(height: 20.0),
             Text(
-              'Phone Number:',
+              'Numéro de téléphone :',
               style: TextStyle(fontSize: 18.0),
             ),
             SizedBox(height: 10.0),
             TextFormField(
               decoration: InputDecoration(
-                hintText: 'Enter your phone number',
+                hintText: 'Entrez votre numéro de téléphone',
                 border: OutlineInputBorder(),
               ),
             ),
             SizedBox(height: 20.0),
             Text(
-              'Delivery Address:',
+              'Adresse de livraison :',
               style: TextStyle(fontSize: 18.0),
             ),
             SizedBox(height: 10.0),
             TextFormField(
               maxLines: 3,
               decoration: InputDecoration(
-                hintText: 'Enter your delivery address',
+                hintText: 'Entrez votre adresse de livraison',
                 border: OutlineInputBorder(),
               ),
             ),
@@ -53,7 +53,7 @@ class PlacingOrderPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Total Price:',
+                  'Prix total :',
                   style: TextStyle(fontSize: 18.0),
                 ),
                 Text(
@@ -82,7 +82,7 @@ class PlacingOrderPage extends StatelessWidget {
                     },
                   ),
                 ),
-                Text('Call me for clarification'),
+                Text('Appelez-moi pour clarification'),
               ],
             ),
             SizedBox(height: 20.0),
@@ -90,9 +90,10 @@ class PlacingOrderPage extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
+                          Navigator.pushNamed(context, '/Valider');
                   // Action lorsque le bouton est pressé
                 },
-                child: Text('Confirm'),
+                child: Text('Confirmer'),
               ),
             ),
           ],
@@ -102,8 +103,3 @@ class PlacingOrderPage extends StatelessWidget {
   }
 }
 
-void main() {
-  runApp(MaterialApp(
-    home: PlacingOrderPage(),
-  ));
-}

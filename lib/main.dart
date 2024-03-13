@@ -1,3 +1,4 @@
+import 'package:e_com_pro/ArticleListPage.dart';
 import 'package:e_com_pro/Menu_items.dart';
 import 'package:e_com_pro/basket_page.dart';
 import 'package:e_com_pro/clothing.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/Panier':(context) => BasketPage(),
         '/Valider_panier':(context) => PlacingOrderPage(),
         '/Details_article':(context) => ClothingApp(),
+        '/Valider' :(context) => Valider(),
         
 
         
